@@ -1,6 +1,6 @@
 # AI-Powered Knowledge Search
 
-An AI-powered knowledge search system that leverages Retrieval-Augmented Generation (RAG) to provide intelligent search results and natural language answers. The project features a React frontend for a clean, responsive UI and a Django backend that serves as an API for document retrieval and answer generation. Document embeddings and vector search (using FAISS or ChromaDB) are used to efficiently fetch relevant documents based on user queries.
+An AI-powered knowledge search system that leverages Retrieval-Augmented Generation (RAG) to provide intelligent search results and natural language answers. The project features a React frontend for a clean, responsive UI and a Django backend that serves as an API for document retrieval and answer generation. Document embeddings and vector search (using FAISS) are used to efficiently fetch relevant documents based on user queries.This project uses GPT-2 that produces close answers but not accurate you can use other LLMs(like OPENAI, Llama etc) to produce more relevant answer, overall the project gives you aN idea of how to implement RAG(Retrieval-Augmented Generation).
 
 ## Table of Contents
 
@@ -12,7 +12,6 @@ An AI-powered knowledge search system that leverages Retrieval-Augmented Generat
   - [Backend (Django)](#backend-django)
 - [Usage](#usage)
 - [Future Enhancements](#future-enhancements)
-- [License](#license)
 
 ## Features
 
@@ -28,12 +27,6 @@ An AI-powered knowledge search system that leverages Retrieval-Augmented Generat
 - **Django REST API:**  
   A backend built with Django that exposes API endpoints for search.
 
-- **Debounced Search Input:**  
-  As users type, a debounced search triggers API calls to improve performance.
-
-- **Loading Indicators & Error Handling:**  
-  The UI provides user feedback during API calls.
-
 ## Tech Stack
 
 - **Frontend:**  
@@ -45,13 +38,31 @@ An AI-powered knowledge search system that leverages Retrieval-Augmented Generat
   - django-cors-headers
 
 - **AI & Vector Search:**  
-  - Sentence Transformers (e.g., `all-MiniLM-L6-v2`) for embeddings
-  - FAISS or ChromaDB for vector indexing and similarity search
-  - Hugging Face Transformers (e.g., GPT-2 or another LLM) for generation
+  - Sentence Transformers (`all-MiniLM-L6-v2`) for embeddings
+  - FAISS for vector indexing and similarity search
+  - Hugging Face Transformers (GPT-2) for generation
 
 - **Others:**  
   - Axios for API calls
   - Virtual environments for Python dependency isolation
 
 ## Project Structure
+
+ai-knowledge-search/ ├── backend/ # Django backend │ ├── backend/ # Django project settings │ ├── searchapi/ # Django app for search API │ │ ├── views.py # API endpoints, RAG, vector search logic │ │ ├── urls.py # URL routes for search API │ │ └── ... │ ├── manage.py │ └── ... └── frontend/ # React frontend ├── src/ │ ├── components/ │ │ ├── WelcomePage.tsx │ │ ├── SearchBar.tsx │ │ ├── SearchResults.tsx │ │ └── FinalAnswer.tsx │ ├── types/ │ │ └── SearchResult.ts │ ├── App.tsx │ └── index.css ├── package.json └── ...
+
+- ** Future Enhancements:**
+      Real Document Database:
+      Store and manage documents in a persistent database rather than hard-coded in memory.
+
+      Improved LLM Integration:
+      Upgrade to a more capable open-source LLM or use a hosted API for better generation.
+
+      User Authentication:
+      Add token-based authentication to secure your API.
+
+      Advanced UI/UX:
+      Improve styling, add pagination, and enhance error handling on the frontend.
+
+      Deployment:
+      Deploy your backend and frontend to cloud services for production use.
 
