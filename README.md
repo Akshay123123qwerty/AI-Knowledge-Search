@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+# AI-Powered Knowledge Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered knowledge search system that leverages Retrieval-Augmented Generation (RAG) to provide intelligent search results and natural language answers. The project features a React frontend for a clean, responsive UI and a Django backend that serves as an API for document retrieval and answer generation. Document embeddings and vector search (using FAISS or ChromaDB) are used to efficiently fetch relevant documents based on user queries.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Setup Instructions](#setup-instructions)
+  - [Frontend (React)](#frontend-react)
+  - [Backend (Django)](#backend-django)
+- [Usage](#usage)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **AI-Powered Search:**  
+  Use of embeddings and vector search to retrieve semantically similar documents.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Retrieval-Augmented Generation (RAG):**  
+  Combine retrieved documents with an LLM to generate a final answer to user queries.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Responsive UI:**  
+  A modern, React-based frontend with Tailwind CSS for styling.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Django REST API:**  
+  A backend built with Django that exposes API endpoints for search.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Debounced Search Input:**  
+  As users type, a debounced search triggers API calls to improve performance.
+
+- **Loading Indicators & Error Handling:**  
+  The UI provides user feedback during API calls.
+
+## Tech Stack
+
+- **Frontend:**  
+  - React (with TypeScript)
+  - Tailwind CSS
+
+- **Backend:**  
+  - Django, Django REST Framework (optional for advanced endpoints)
+  - django-cors-headers
+
+- **AI & Vector Search:**  
+  - Sentence Transformers (e.g., `all-MiniLM-L6-v2`) for embeddings
+  - FAISS or ChromaDB for vector indexing and similarity search
+  - Hugging Face Transformers (e.g., GPT-2 or another LLM) for generation
+
+- **Others:**  
+  - Axios for API calls
+  - Virtual environments for Python dependency isolation
+
+## Project Structure
+
