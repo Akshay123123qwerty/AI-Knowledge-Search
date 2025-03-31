@@ -6,11 +6,6 @@ An AI-powered knowledge search system that leverages Retrieval-Augmented Generat
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Setup Instructions](#setup-instructions)
-  - [Frontend (React)](#frontend-react)
-  - [Backend (Django)](#backend-django)
-- [Usage](#usage)
 - [Future Enhancements](#future-enhancements)
 
 ## Features
@@ -50,19 +45,20 @@ An AI-powered knowledge search system that leverages Retrieval-Augmented Generat
 
 ai-knowledge-search/ ├── backend/ # Django backend │ ├── backend/ # Django project settings │ ├── searchapi/ # Django app for search API │ │ ├── views.py # API endpoints, RAG, vector search logic │ │ ├── urls.py # URL routes for search API │ │ └── ... │ ├── manage.py │ └── ... └── frontend/ # React frontend ├── src/ │ ├── components/ │ │ ├── WelcomePage.tsx │ │ ├── SearchBar.tsx │ │ ├── SearchResults.tsx │ │ └── FinalAnswer.tsx │ ├── types/ │ │ └── SearchResult.ts │ ├── App.tsx │ └── index.css ├── package.json └── ...
 
-- ** Future Enhancements:**
-      Real Document Database:
-      Store and manage documents in a persistent database rather than hard-coded in memory.
+## Future Enhancements
 
-      Improved LLM Integration:
-      Upgrade to a more capable open-source LLM or use a hosted API for better generation.
+- **Real Document Database:**  
+  Store and manage documents in a persistent database rather than hard-coding them in memory. This will allow dynamic updates and scalability for a larger collection of documents.
 
-      User Authentication:
-      Add token-based authentication to secure your API.
+- **Improved LLM Integration:**  
+  Upgrade to a more capable open-source LLM or use a hosted API to enhance the quality of generated responses. This can include fine-tuning for domain-specific language and better context handling.
 
-      Advanced UI/UX:
-      Improve styling, add pagination, and enhance error handling on the frontend.
+- **User Authentication:**  
+  Add token-based authentication (e.g., using JWT) to secure your API endpoints. This ensures that only authorized users can access the search functionality and data.
 
-      Deployment:
-      Deploy your backend and frontend to cloud services for production use.
+- **Advanced UI/UX:**  
+  Improve the user interface by enhancing styling, adding pagination for search results, and incorporating robust error handling. Additional features like loading indicators, search suggestions, and responsive design will further boost user experience.
+
+- **Deployment:**  
+  Deploy both the Django backend and React frontend to cloud services (such as Heroku, AWS, or Vercel) to make the application accessible in a production environment. Consider containerization (e.g., Docker) for easier scalability and maintenance.
 
