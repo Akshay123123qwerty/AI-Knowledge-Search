@@ -35,7 +35,7 @@ An AI-powered knowledge search system that leverages Retrieval-Augmented Generat
 - **AI & Vector Search:**  
   - Sentence Transformers (`all-MiniLM-L6-v2`) for embeddings
   - FAISS for vector indexing and similarity search
-  - Hugging Face Transformers (GPT-2) for generation
+  - Hugging Face Transformers (`GPT-2`) for generation
 
 - **Others:**  
   - Axios for API calls
