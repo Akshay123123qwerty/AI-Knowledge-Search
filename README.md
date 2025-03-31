@@ -1,6 +1,6 @@
 # AI-Powered Knowledge Search
 
-An AI-powered knowledge search system that leverages Retrieval-Augmented Generation (RAG) to provide intelligent search results and natural language answers. The project features a React frontend for a clean, responsive UI and a Django backend that serves as an API for document retrieval and answer generation. Document embeddings and vector search (using FAISS) are used to efficiently fetch relevant documents based on user queries.This project uses GPT-2 that produces close answers but not accurate you can use other LLMs(like OPENAI, Llama etc) to produce more relevant answer, overall the project gives you aN idea of how to implement RAG(Retrieval-Augmented Generation).
+An AI-powered knowledge search system that leverages Retrieval-Augmented Generation (RAG) to provide intelligent search results and natural language answers. The project features a React frontend for a clean, responsive UI and a Django backend that serves as an API for document retrieval and answer generation. Document embeddings and vector search (using FAISS) are used to efficiently fetch relevant documents based on user queries.This project uses GPT-2 that produces close answers but not accurate you can use other LLMs(like OPENAI, Llama etc) to produce more relevant answer, overall the project gives you an idea of how to implement RAG(Retrieval-Augmented Generation).
 
 ## Table of Contents
 
