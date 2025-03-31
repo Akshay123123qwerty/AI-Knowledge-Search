@@ -43,7 +43,34 @@ An AI-powered knowledge search system that leverages Retrieval-Augmented Generat
 
 ## Project Structure
 
-ai-knowledge-search/ ├── backend/ # Django backend │ ├── backend/ # Django project settings │ ├── searchapi/ # Django app for search API │ │ ├── views.py # API endpoints, RAG, vector search logic │ │ ├── urls.py # URL routes for search API │ │ └── ... │ ├── manage.py │ └── ... └── frontend/ # React frontend ├── src/ │ ├── components/ │ │ ├── WelcomePage.tsx │ │ ├── SearchBar.tsx │ │ ├── SearchResults.tsx │ │ └── FinalAnswer.tsx │ ├── types/ │ │ └── SearchResult.ts │ ├── App.tsx │ └── index.css ├── package.json └── ...
+ai-knowledge-search/ 
+├── backend/
+    # Django backend │ 
+├── backend/
+    # Django project settings │
+├── searchapi/ 
+    # Django app for search API │
+│ ├── views.py
+    # API endpoints, RAG, vector search logic │
+│ ├── urls.py 
+    # URL routes for search API │ 
+│ └── ... │
+├── manage.py │ 
+└── ...
+└── frontend/
+    # aisearch
+    ├── src/ │
+    ├── components/ │
+    │ ├── WelcomePage.tsx │ 
+    │ ├── SearchBar.tsx │ │ 
+    ├── SearchResults.tsx │ 
+    │ └── FinalAnswer.tsx │ 
+    ├── types/ │ 
+    │ └── SearchResult.ts │
+    ├── App.tsx │ 
+    └── index.css 
+    ├── package.json 
+    └── ...
 
 ## Future Enhancements
 
