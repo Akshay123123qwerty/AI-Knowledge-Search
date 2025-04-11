@@ -17,12 +17,12 @@ interface SearchResult {
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [started, setStarted] = useState(false);
-  const [query, setQuery] = useState("");
+  const [, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const[clicked,setClicked] = useState<boolean>(false);
+  const[,setClicked] = useState<boolean>(false);
   const[showRegister,setShowRegister] = useState<boolean>(false);
 
   const handleStart = () => setStarted(true);
