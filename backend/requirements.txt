@@ -1,0 +1,8 @@
+Django>=4.0
+djangorestframework
+djangorestframework-simplejwt
+sentence-transformers
+faiss-cpu
+transformers
+gunicorn
+python-dotenv
