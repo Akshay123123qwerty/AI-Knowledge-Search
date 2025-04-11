@@ -21,7 +21,7 @@ const App: React.FC = () => {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [answer, setAnswer] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [, setError] = useState<string | null>(null);
   const[,setClicked] = useState<boolean>(false);
   const[showRegister,setShowRegister] = useState<boolean>(false);
 
