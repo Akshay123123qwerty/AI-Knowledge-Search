@@ -18,10 +18,11 @@ const LoginForm: React.FC< RegisterType> = ({ onLogin, onRegister }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/token/", {
-        username,
-        password,
-      });
+     const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/token/`, {
+  username,
+  password,
+});
+
    
 
       const { access, refresh } = response.data;
