@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['ai-knowledge-backend.onrender.com']
 
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "unsafe-default-key")
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+
 
 # Application definition
 
