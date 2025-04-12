@@ -9,6 +9,8 @@ services:
         value: i&9apl17dkth!m2tgy^z^^@%t(j6-r!j2p(w-djc=*%6d47*p4
       - key: DEBUG
         value: False
+      - key: DJANGO_SETTINGS_MODULE
+        value: backend.settings
     plan: free
 
   - type: web
