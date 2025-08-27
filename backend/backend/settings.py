@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ldcc(*1w!ri6v4*bkug=ivc65lthu=00hwg$tqqfe9d-2j#s_7'
+SECRET_KEY = 'DjangoSecretKey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -149,5 +149,6 @@ SIMPLE_JWT = {
     'BLACKLIST_AFTER_ROTATION' : True,
     'ROTATE_REFRESH_TOKENS' : True
 }
+
 
 
